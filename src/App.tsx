@@ -11,7 +11,7 @@ function App() {
   const [title, setTitle] = useState<any>();
 
   let form = new FormData();
-  let url = 'http://localhost:3000/genOG'
+  let url = 'https://backendoggen.onrender.com/genOG'
 
   async function handleSubmit() {
 
