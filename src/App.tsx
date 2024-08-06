@@ -91,7 +91,7 @@ setOg(imgURL);
 
  <div>
       <img 
-      key={og}
+      key={`${Date.now}`}
       src= {`${og}?${Date.now}`}
       
       >
