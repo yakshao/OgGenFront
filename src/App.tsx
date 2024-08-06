@@ -37,7 +37,7 @@ function App() {
 
     
     
-     const imgURL = dResponse.img + '?alt=media&token='
+     const imgURL = dResponse.img + '?alt=media&' + `?${new Date().getTime()}`;
 setOg(imgURL);
 
     }
@@ -89,16 +89,16 @@ setOg(imgURL);
       </form>
     </div>
 
- <div>
+  {og &&  <div>
       <img 
-      key={`${Date.now}`}
-      src= {`${og}?${Date.now}`}
+      key={og}
+      src= {og}
       
       >
         </img>
 
-    </div>
-        </>
+    </div>}
+    </>
   )
   
 }
