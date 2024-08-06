@@ -91,9 +91,10 @@ setOg(imgURL);
 
   {og &&  <div>
       <img 
-      key={`${og}${new Date().getTime()}`}
+      key={`${og}`}
       src= {`${og}${new Date().getTime()}`}
-    
+    height={100}
+    width={100}
      />
 
     </div>}
