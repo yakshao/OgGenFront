@@ -9,7 +9,7 @@ function App() {
 
 
   let form = new FormData();
-  let url = 'http://localhost:3000/genOG'
+  let url = 'https://backog.onrender.com/genOG'
 
   async function handleSubmit() {
 
@@ -29,23 +29,12 @@ function App() {
     
   const dResponse = await response.json();
 
-     const fLink = await fetch(dResponse.img, {
-      method: 'POST'
-     });
-     const f2Link = await fLink.json();
+setOg(dResponse.url);
 
-
-    
-    
-     const imgURL = dResponse.img + '?alt=media&token=' + f2Link["downloadTokens"]
-setOg(imgURL);
+window && window.open(dResponse.url, '_blank').focus();
 
     }
 
-
-
-
-  
 
   return (
     <>
@@ -89,14 +78,17 @@ setOg(imgURL);
       </form>
     </div>
 
-  {og &&  <div>
-      <img 
-      key={`${og}`}
-      src= {`${og}${new Date().getTime()}`}
-    height={100}
-    width={100}
-     />
+  {og && 
+  <div>
+ 
 
+      <img 
+      width={1200}
+      height={630}
+      src= {og}
+
+     />
+    
     </div>}
     </>
   )
