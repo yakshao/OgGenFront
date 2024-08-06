@@ -30,8 +30,8 @@ function App() {
   const dResponse = await response.json();
 
 setOg(dResponse.url);
+window.open(dResponse.url, '_blank')?.focus(); // okay also
 
-window && window.open(dResponse.url, '_blank').focus();
 
     }
 
