@@ -1,5 +1,5 @@
 
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import './App.css'
 
 function App() {
@@ -33,11 +33,11 @@ function App() {
       method: 'POST'
      });
      const f2Link = await fLink.json();
-     console.log(f2Link["downloadTokens"]);
+
 
     
     
-     const imgURL = dResponse.img + '?alt=media&' + `?${new Date().getTime()}`;
+     const imgURL = dResponse.img + '?alt=media&token=' + f2Link["downloadTokens"]
 setOg(imgURL);
 
     }
@@ -91,11 +91,10 @@ setOg(imgURL);
 
   {og &&  <div>
       <img 
-      key={og}
-      src= {og}
-      
-      >
-        </img>
+      key={`${og}${new Date().getTime()}`}
+      src= {`${og}${new Date().getTime()}`}
+    
+     />
 
     </div>}
     </>
