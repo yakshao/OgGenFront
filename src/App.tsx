@@ -1,5 +1,5 @@
 
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import './App.css'
 
 function App() {
