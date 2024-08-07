@@ -82,7 +82,6 @@ function App() {
                 style={{ margin: 10 }}
               >Content</h5>
 
-
               <textarea
                 style={{ width: '400px', height: '100px', padding: '20px', borderRadius: '10px' }}
                 id='desc'
@@ -127,11 +126,18 @@ function App() {
 
         {
           loading &&
+          <>
+          <div style={{marginTop: '30px'}}>
+          <b> It may take some while to process the request for first time, as the free server sleeps after long inactivity. </b>
+          </div>
           <div className='center'>
+       
             <div>
+  
               <div className="loader"></div>
             </div>
           </div>
+          </>
         }
 
         {og &&
