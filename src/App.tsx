@@ -53,7 +53,7 @@ function App() {
         <div className='form'>
           <form id='uploadForm'>
             <h2>OG Generator</h2>
-
+            <a href="https://github.com/yakshao/OGBackend/"><i className={"fa fa-github"} style={{fontSize:'30px', color: 'black'}}></i></a>
             <div style={{alignSelf: 'center' }}>
 
               <h5
